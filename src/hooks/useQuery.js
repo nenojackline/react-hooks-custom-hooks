@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 function useQuery(url) {
   const [isLoaded, setIsLoaded] = useState(false);
   // rename `posts` to a more generic `data`
+   //const { data: posts, isLoaded } = useQuery("http://localhost:4000/posts");
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -21,5 +22,6 @@ function useQuery(url) {
   // return an *object* with the data and isLoaded state
   return { data, isLoaded };
 }
+ 
 
 export default useQuery;
